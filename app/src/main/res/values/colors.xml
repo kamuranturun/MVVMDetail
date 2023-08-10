@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <!-- 1 color,purple_500 ü primary olarak değiştirelim ve renk kodunu değiştirelim ,
+    sonra purple_700 ü accent olarak değiştirelim ve
+    renk kodunu değiştirelim, sonra themes.xml e gidelim-->
+    <color name="primary">#f52c56</color>
+    <color name="accent">#f52c56</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--4 color, yeni renkler tanımlayalım -->
+    <color name="g_black">#33405f</color>
+    <!--4 color, yeni renkler tanımladık ve şimdi navigation component dependencyleri ekleyelim,
+    build.gradle app a gidelim-->
+
+    <!--  7 SearchView,-->
+    <color name="g_gray">#8A8989</color>
+    <!--  7 SearchView, go back to searchbox background xml-->
+</resources>

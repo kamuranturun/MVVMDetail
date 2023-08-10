@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- actionbarı kaldırmak için DayNight.DarkActionBar yerine NoActionBar yazdık,
+     şimdi renkleri değiştirmek için colors.xml e gidelim-->
+    <style name="Theme.NewEasyFoodMVVM" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- 2 color, colors.xml de değiştirdiğimiz renk isimlerini buraya uygulayalım,
+         purple_500 yerine primary yazalım, purple_700 yerine accent yazalım,
+         sonra themes.xml(night) a gidelim -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/accent</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color değiştirdik , şeffaflığı ayarladık. -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar" targetApi="m">true</item>
+        <!-- Status bar color değiştirdik , şeffaflığı ayarladık. -->
+        <!-- Customize your theme here. -->
+        <!-- 28 LongClickPopularItem-->
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogtheme</item>
+        <!-- 28 LongClickPopularItem,  go to styles xml-->
+
+    </style>
+</resources>

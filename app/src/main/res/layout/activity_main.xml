@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <!--2 navigation-->
+    <!--7 navigation nav_graphı fragment a ekle
+     fragmenta name olarak ismini ver-->
+    <fragment
+        android:id="@+id/host_fragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btm_nav"
+        app:navGraph="@navigation/nav_graph"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost ="true"
+        />
+    <!--7 navigation, sonra res klasörüne git ve menu olarak
+    btm_menu adında bir resource file oluştur çünkü bunu alta
+    hizaladığımız fragment için kullanacağız,
+    BottomNavigationView için-->
+    <!--2 navigation-->
+
+    <!--3 navigation-->
+    <!--10 navigation, btm_menu yu ekle ve mainactivity.kt ye gidip
+    bottomnavigationviewi fragmenta bağlayalım tıklanınca değişsin-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/btm_nav"
+        app:menu="@menu/btm_menu"/>
+    <!--3 navigation res e git ve nav_graph oluştur
+    nav_graph içinde 3 adet fragment oluştur
+    birincisi HomeFragment, ikincisi FavoritesFragment
+    ,üçüncüsü CategoriesFragment, sonra layout içinde fragment_home
+    git-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

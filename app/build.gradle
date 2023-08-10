@@ -1,0 +1,117 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    //2 favorites save roomdb,
+    id 'kotlin-kapt'
+    //2 favorites save roomdb,
+    //şimdi Meal data clasımıza gidip entity yani tablo olarak anotation ekleyelim
+}
+
+android {
+    namespace 'com.turun.neweasyfoodmvvm'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.turun.neweasyfoodmvvm"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    //tüm projede kullanılacak
+    buildFeatures{
+        viewBinding =true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //1 navigation
+    def nav_version = "2.6.0"
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    //1 navigation activity_main.xml e gidelim
+
+
+    //1 tasarım
+    //intuit boyut birimi kütüphanesi
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+    //gif animasyonu için
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.27'
+    //1 tasarım , şimdi res klasörüne gidelim ve yeni bir resource file oluşturalım yazı fontu için,
+    //ardından içindeki varsayılan xml fontu silelim ve kendi font dosyamızı ekleyelim(myfont.ttf),
+    //ardından homefragmentxml e gidip tasarım işlemine devam edelim
+
+
+    //1 randommeal
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    //1 randommeal , gidelim ve fragments adında paket oluşturalım,
+    //oluşturduğumuz paket içine fragmentları taşıyalım,
+    //sonra ctivities diye bir paket oluşturalım, mainactivity i içine atalım,
+    //sonra data classlar için pojo isminde paket oluşturalım,
+    //ardından retrofit adında paket oluşturalım
+    //sonra randommeal apisindeki bilgileri kopyalayıp ardından
+    //pojoya gelip sağ tıklayıp new deyip kotlin data class file from json u tıklıyoruz
+    //kopyalamış olduğumuz bilgileri yapıştırıp ismini MealList(yemeklistesi)olarak   verdikten sonra
+    //generate butonuna tıklıyoruz ve data classımız hazır,
+
+
+    //1 randommealviewModel, burda viewmodel livedata kullanacağız
+    def lifecycle_version = "2.6.1"
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+    //1 randommealviewModel, git ve viewModel adında paket oluştur,
+    //paketin içine gir ve HomeViewModel adında bir class oluştur
+
+
+    //room
+    //1 favorites save roomdb, roomdb,coroutines
+    def room_version = "2.5.2"
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+    //1 favorites save roomdb,
+    //room da veritabanı tablolarına yerelde kayıt yapılır,
+    //Dao ile Read, update, delete işlemleri yapılır
+    //typeconverter object den stringe doğrudur
+
+    //15 favorites save roomdb,
+    //viewmodelscope
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+    //15 favorites save roomdb, go to MealViewModelDetail
+
+
+
+}

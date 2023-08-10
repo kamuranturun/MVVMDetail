@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 26 LongClickPopularItem-->
+<resources>
+    <style name="AppBottomSheetDialogtheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <!-- 29 LongClickPopularItem, rounded ı ekle, runapp , bottomsheet tasarımı bitti,
+        sonraki adımda searchview kısmını kodlayacağız ,
+        apiden search kısmını alalım ve meal api ye gidip get isteği yaparak başlayalım. go to
+        mealapi-->
+        <item name="android:background">@drawable/rounded_top_shape</item>
+    </style>
+</resources>
+    <!-- 26 LongClickPopularItem, drawable içinden resource file oluştur rounded_top_shape isminde,
+     buraya ekle-->

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--8 navigation, drawble git ve 3 adet vektör asset oluştur
+    bir tanesi home için, diğeri favorites ve diğeri categories
+    için-->
+    <!--9 navigation, şimdi itemları buraya ekleyelim
+    ve nav_graph içindeki id lerini buraya kopyalayalım-->
+    <item android:title="Home" android:icon="@drawable/ic_home"
+        android:id="@+id/homeFragment"/>
+    <item android:title="Favorites" android:icon="@drawable/ic_favorites"
+        android:id="@+id/favoritesFragment"/>
+    <item android:title="Categories" android:icon="@drawable/ic_categories"
+        android:id="@+id/categoriesFragment"/>
+    <!--9 navigation , şimdi activitiy_main.xml e gidip bottomnavigationView e
+    bu btm_menu yu ekleyelim-->
+
+</menu>

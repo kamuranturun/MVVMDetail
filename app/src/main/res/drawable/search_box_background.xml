@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  6 SearchView,-->
+<shape  android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--  create color g_gray go to colors file-->
+    <!--  8 SearchView,-->
+    <solid android:color="@color/g_gray"/>
+    <corners android:radius="20dp"/>
+    <!--  8 SearchView, go back fragmentsearch xml-->
+</shape>
+    <!--  6 SearchView,-->
